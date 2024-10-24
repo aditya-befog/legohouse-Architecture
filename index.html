@@ -10,7 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
@@ -18,7 +18,9 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -36,7 +38,7 @@
     </nav>
 
     <div class="main">
-      <h1 class="spaced">LEGO HOUSE</h1>
+      <h1>LEGO HOUSE</h1>
       <h2>ARCHITECTS</h2>
     </div>
 
@@ -47,39 +49,58 @@
     </div>
 
     <section class="services-section">
-      <p class="Services">Services</p>
-      <p class="quality">Quality You Can Trust</p>
-    </section>
-
-    <section class="features-section">
+      <div class="services-con">
+        <p class="Services">Services</p>
+        <p class="quality">Quality You Can Trust</p>
+      </div>
       <h2>Features</h2>
+    <section class="features-section">
       <div class="features-container">
-        <img class="feature-left" src="img/1.jpg" alt="Feature 1" />
-        <img class="feature-center" src="img/2.jpg" alt="Feature 2" />
-        <img class="feature-right" src="img/3.jpg" alt="Feature 3" />
+        <section class="sec show-animate">
+          <div class="container animate">
+            <h1 class="animate-text">hello</h1>
+            <div class="images">
+              <img
+                class="image left-image"
+                src="img/1.jpg"
+                alt="Left Image"
+              />
+              <img
+                class="image right-image"
+                src="img/2.jpg"
+                alt="Right Image"
+              />
+              <img
+                class="image center-image"
+                src="img/3.jpg"
+                alt="Center Image"
+              />
+            </div>
+          </div>
+        </section>
       </div>
     </section>
+    </section>
+
+
     <div class="h-screen"></div>
     <div class="container-img">
-
       <section class="comparisonSection">
-  
-          <div class="comparisonImage beforeImage">
-              <img src="img/pro1.jpg" alt="before" class="comparisonImg" />
-          </div>
-  
-          <div class="comparisonImage afterImage">
-            <img src="img/pro2.jpg" alt="before" class="comparisonImg" />
-          </div>
-  
-          <div class="comparisonImage thirdImage">
-            <img src="img/pro3.jpg" alt="before" class="comparisonImg" />
-          </div>
+        <div class="comparisonImage beforeImage">
+          <img src="img/pro1.jpg" alt="before" class="comparisonImg" />
+        </div>
+
+        <div class="comparisonImage afterImage">
+          <img src="img/pro2.jpg" alt="after" class="comparisonImg" />
+        </div>
+
+        <div class="comparisonImage thirdImage">
+          <img src="img/pro3.jpg" alt="third" class="comparisonImg" />
+        </div>
       </section>
-  
-  </div>
-  <div class="h-screen"></div>
-    
+    </div>
+
+    <div class="h-screen"></div>
 
     <section class="projects-section">
       <h2>Our Projects</h2>
@@ -116,6 +137,7 @@
         <div class="end-anim"></div>
       </section>
     </section>
+
     <footer class="footer">
       <div class="container-footer">
         <div class="row">
@@ -179,8 +201,6 @@
         </div>
       </div>
     </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis"></script>
     <script src="script.js"></script>
   </body>
 </html>
