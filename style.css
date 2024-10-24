@@ -136,7 +136,8 @@ h1 {
   display: block;
   color: black;
   margin-top: 0;
-  font-weight: 800;
+  font-weight: 600;
+  transform: translateY(-103px);
 }
 
 .feature-title {
@@ -154,14 +155,14 @@ h1 {
 
 .features-section {
   text-align: center;
-  padding: 4px 174px;
+  padding: 0px 174px;
   top: -125px;
 }
 
 .features-container {
   display: flex;
   justify-content: center; /* Centering the features container */
-  margin-top: 27px;
+  margin-top: 0px;
   position: relative; /* Added relative positioning for child absolute positioning */
 }
 
@@ -187,7 +188,7 @@ h1 {
 
 .images {
   position: relative;
-  width: 125%;
+  width: 140%;
   height: 100%;
   display: flex;
   justify-content: space-between;
