@@ -17,7 +17,6 @@ body {
   align-items: center;
   padding: 16px 32px;
   background-color: transparent;
-  z-index: 1000;
 }
 
 .logo img {
@@ -39,6 +38,11 @@ body {
 
 .menu a:hover {
   text-decoration: underline;
+}
+
+main{
+  /* background-color: #8a048a; */
+  height: 100vh;
 }
 
 .main {
@@ -92,98 +96,131 @@ h1 {
 }
 
 .services-section h2 {
-  font-size: 9.6rem;
-  letter-spacing: 20px;
-  margin-bottom: 20px;
+  font-size: 7.6rem;
+  letter-spacing: 34px;
+  margin-bottom: 12px;
   color: #c7c7c7;
 }
 
-.services-con {
-  padding-bottom: 20px;
-}
 .image-container img.active {
   transform: translateY(0);
   filter: blur(0);
 }
 
 .services-section {
-  border-radius: 10px;
+  position: relative;
   text-align: center;
-  padding: 100px 20px;
+  padding: 11px -5px;
+  height: 110vh;
+  background-color: #ffffff;
 }
 
-.Services{
-  font-size: 20px;
+.services-con {
+  position: relative;
+  overflow: hidden;
+}
+
+.Services {
+  font-size: 10px;
   background-color: red;
   color: #F2F2F2;
-  border-radius: 5rem;
-  margin-bottom: 20rem;
-  display: inline;
-  padding: 6px;
+  font-weight: 800;
+  border-radius: 2rem;
+  display: inline-block;
+  padding: 3px;
+  transform: translateY(-100px);
+  transition: transform 1s ease-out, opacity 1s ease-out;
 }
 
 .quality {
-  padding-top: 2rem;
-  font-size: 20px;
+  display: block;
+  color: black;
+  margin-top: 0;
+  font-weight: 800;
+}
+
+.feature-title {
+  font-size: 2rem;
+  transition: transform 1s ease-out 0.2s, opacity 1s ease-out 0.2s;
+}
+
+.Services.show, .quality.show {
+  transform: translateY(100px);
+}
+
+.feature-title.show {
+  transform: translateY(0);
 }
 
 .features-section {
   text-align: center;
-  padding: 100px 20px;
+  padding: 4px 174px;
+  top: -125px;
 }
 
 .features-container {
   display: flex;
-  justify-content: space-between;
-  margin-top: 20px;
+  justify-content: center; /* Centering the features container */
+  margin-top: 27px;
+  position: relative; /* Added relative positioning for child absolute positioning */
 }
 
 .sec {
   display: flex;
   justify-content: center;
-  align-items: center;
-  min-height: 100vh;
+  align-items: flex-end; /* Align items to the bottom */
+  min-height: 45vh;
   background-color: #1f242d;
+  min-width: 70vw;
+  border-radius: 1.5rem;
 }
 
 .container {
   position: relative;
   height: 40vh;
   width: 40vw;
-  background-color: antiquewhite;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end; /* Align content to the bottom */
   align-items: center;
 }
 
 .images {
   position: relative;
-  width: 100%;
+  width: 125%;
+  height: 100%;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  opacity: 0;
+  align-items: flex-end;
+  opacity: 1;
 }
 
 .image {
-  position: absolute;
-  max-width: 20%;
   transition: 1s;
+  max-width: 30%; 
+  max-height: 75%;
 }
 
-.left-image {
-  left: -100%;
+.image.left-image {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  top: 129px;
 }
 
-.right-image {
-  right: -100%;
-}
-
-.center-image {
-  top: -100%;
+.image.center-image {
+  position: absolute;
+  bottom: 0;
   left: 50%;
   transform: translateX(-50%);
+  top: 129px;
+}
+
+.image.right-image {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  top: 115px;
 }
 
 .container-img {
@@ -194,7 +231,8 @@ h1 {
 
 .comparisonSection {
   position: relative;
-  height: 100%;
+  height: 100vh;
+  /* background-color: cadetblue; */
 }
 
 .comparisonImage {
@@ -232,6 +270,7 @@ h1 {
 .projects-section {
   text-align: center;
   padding: 100px 20px;
+  /* background-color: chartreuse; */
 }
 
 .projects-card {

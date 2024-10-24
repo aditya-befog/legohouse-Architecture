@@ -64,3 +64,26 @@ gsap.ticker.add((time) => {
 });
 gsap.ticker.lagSmoothing(0);
 
+window.addEventListener('scroll', function() {
+    const servicesCon = document.querySelector('.services-con');
+    const services = document.querySelector('.Services');
+    const quality = document.querySelector('.quality');
+    const featureTitle = document.querySelector('.feature-title');
+    const featuresContainer = document.querySelector('.features-container');
+    const lastImage = document.querySelector('.image:last-child');
+    
+    const servicesConTop = servicesCon.getBoundingClientRect().top;
+    const featuresConTop = featuresContainer.getBoundingClientRect().top;
+  
+    if (servicesConTop < window.innerHeight - 100) {
+      services.classList.add('show');
+      quality.classList.add('show');
+      featureTitle.classList.add('show');
+    }
+  
+    if (featuresConTop < window.innerHeight - 100) {
+      featuresContainer.classList.add('show');
+      lastImage.classList.add('show-bottom');
+    }
+  });
+  
