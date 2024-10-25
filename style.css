@@ -9,6 +9,8 @@ body {
   overflow-x: hidden;
 }
 
+/* Navbar */
+
 .navbar {
   position: sticky;
   top: 0;
@@ -40,8 +42,11 @@ body {
   text-decoration: underline;
 }
 
-main{
-  /* background-color: #8a048a; */
+/* Landing Page */
+
+/* Main section styling */
+/* Main section styling */
+main {
   height: 100vh;
 }
 
@@ -61,6 +66,7 @@ main{
   font-size: 110px;
 }
 
+/* Image container styling */
 .image-container {
   position: relative;
   display: flex;
@@ -70,42 +76,35 @@ main{
 
 .image-container img {
   width: 30%;
-  transition: transform 1s, filter 1s;
+  transition: transform 0.4s ease-out, filter 0.4s ease-out;
+  /* Transition is applied for smooth movement */
 }
 
+/* Initial position of the images */
 .image-left {
-  transform: translateY(-100%);
+  transform: translateY(90%);
 }
 
 .image-right {
-  transform: translateY(-100%);
+  transform: translateY(90%);
 }
-
 
 .image-center {
   transform: translateY(-250%);
 }
 
+/* Shrink effect on the main section when scrolling */
 .shrink {
   transform: scale(0.7);
   filter: blur(8px);
 }
+
 h1 {
   font-size: 2.6rem;
   margin-bottom: 20px;
 }
 
-.services-section h2 {
-  font-size: 7.6rem;
-  letter-spacing: 34px;
-  margin-bottom: 12px;
-  color: #c7c7c7;
-}
-
-.image-container img.active {
-  transform: translateY(0);
-  filter: blur(0);
-}
+/* Services */
 
 .services-section {
   position: relative;
@@ -113,6 +112,13 @@ h1 {
   padding: 11px -5px;
   height: 110vh;
   background-color: #ffffff;
+}
+
+.services-section h2 {
+  font-size: 7.6rem;
+  letter-spacing: 34px;
+  margin-bottom: 12px;
+  color: #c7c7c7;
 }
 
 .services-con {
@@ -230,6 +236,8 @@ h1 {
   overflow: hidden;
 }
 
+/* comparisonSection */
+
 .comparisonSection {
   position: relative;
   height: 100vh;
@@ -267,7 +275,7 @@ h1 {
   z-index: 1;
 }
 
-
+/* Project Section */
 .projects-section {
   text-align: center;
   padding: 100px 20px;

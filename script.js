@@ -1,30 +1,35 @@
 document.addEventListener("scroll", () => {
-    const scrollPosition = window.pageYOffset;
+    const scrollPosition = window.pageYOffset; // Get the current scroll position
+  
+    // Select the elements
     const mainSection = document.querySelector(".main");
     const imageLeft = document.querySelector(".image-left");
     const imageCenter = document.querySelector(".image-center");
     const imageRight = document.querySelector(".image-right");
-    const servicesSection = document.querySelector(".services-section");
-
+  
+    // Shrink the main section based on scroll position
     if (scrollPosition > 100) {
-        mainSection.classList.add("shrink");
-        [imageLeft, imageCenter, imageRight].forEach(image => {
-            image.classList.add("active");
-        });
+      mainSection.classList.add("shrink");
     } else {
-        mainSection.classList.remove("shrink");
-        [imageLeft, imageCenter, imageRight].forEach(image => {
-            image.classList.remove("active");
-        });
+      mainSection.classList.remove("shrink");
     }
-
-    if (scrollPosition > 500) {
-        servicesSection.classList.add("active");
-    } else {
-        servicesSection.classList.remove("active");
-    }
-});
-
+  
+    // Left and right image movement based on scroll
+    const leftImageOffset = Math.max(10 - scrollPosition * 0.5, -250);  // Moves the left image up
+    const rightImageOffset = Math.max(10 - scrollPosition * 0.5, -250); // Moves the right image up
+    
+    // Center image moves independently from top to center
+    const centerImageOffset = Math.min(-250 + scrollPosition * 0.5, 0); // Moves center image from top to 0
+  
+    // Apply the transforms based on scroll position, keeping them separate
+    imageLeft.style.transform = `translateY(${leftImageOffset}%)`;
+    imageRight.style.transform = `translateY(${rightImageOffset}%)`;
+    imageCenter.style.transform = `translateY(${centerImageOffset}%)`;
+  
+    // Ensure smooth animation during scrolling, without overlapping positions
+  });
+  
+  
 const cardsWrapper = gsap.utils.toArray(".cards_item");
 const cardEl = gsap.utils.toArray(".cards_el");
 
