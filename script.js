@@ -1,34 +1,43 @@
+const menuToggle = document.getElementById('menuToggle');
+    const menu = document.getElementById('menu');
+    const hamburger = document.getElementById('hamburger');
+    const close = document.getElementById('close');
+
+    menuToggle.addEventListener('click', () => {
+      menu.classList.toggle('active');
+      hamburger.style.display = hamburger.style.display === 'none' ? 'block' : 'none';
+      close.style.display = close.style.display === 'none' ? 'block' : 'none';
+    });
+
 document.addEventListener("scroll", () => {
-    const scrollPosition = window.pageYOffset; // Get the current scroll position
+    const scrollPosition = window.pageYOffset; 
   
-    // Select the elements
     const mainSection = document.querySelector(".main");
     const imageLeft = document.querySelector(".image-left");
     const imageCenter = document.querySelector(".image-center");
     const imageRight = document.querySelector(".image-right");
   
-    // Shrink the main section based on scroll position
     if (scrollPosition > 100) {
       mainSection.classList.add("shrink");
     } else {
       mainSection.classList.remove("shrink");
     }
-  
-    // Left and right image movement based on scroll
-    const leftImageOffset = Math.max(10 - scrollPosition * 0.5, -250);  // Moves the left image up
-    const rightImageOffset = Math.max(10 - scrollPosition * 0.5, -250); // Moves the right image up
+
+    const leftImageOffset = Math.max(10 - scrollPosition * 0.5, -250);
+    const rightImageOffset = Math.max(10 - scrollPosition * 0.5, -250);
     
-    // Center image moves independently from top to center
-    const centerImageOffset = Math.min(-250 + scrollPosition * 0.5, 0); // Moves center image from top to 0
-  
-    // Apply the transforms based on scroll position, keeping them separate
+    const centerImageOffset = Math.min(-250 + scrollPosition * 0.5, 0);
+ 
     imageLeft.style.transform = `translateY(${leftImageOffset}%)`;
     imageRight.style.transform = `translateY(${rightImageOffset}%)`;
     imageCenter.style.transform = `translateY(${centerImageOffset}%)`;
   
-    // Ensure smooth animation during scrolling, without overlapping positions
   });
-  
+  gsap.registerPlugin(ScrollTrigger);
+
+  if (window.innerWidth <= 768) {
+    startMobileScroll();
+  }
   
 const cardsWrapper = gsap.utils.toArray(".cards_item");
 const cardEl = gsap.utils.toArray(".cards_el");
@@ -60,35 +69,3 @@ cardsWrapper.forEach((e, i) => {
     });
 });
 
-// Optionally, if using Lenis (smooth scrolling)
-const lenis = new Lenis();
-lenis.on('scroll', () => ScrollTrigger.update());
-
-gsap.ticker.add((time) => {
-    lenis.raf(time * 1000);
-});
-gsap.ticker.lagSmoothing(0);
-
-window.addEventListener('scroll', function() {
-    const servicesCon = document.querySelector('.services-con');
-    const services = document.querySelector('.Services');
-    const quality = document.querySelector('.quality');
-    const featureTitle = document.querySelector('.feature-title');
-    const featuresContainer = document.querySelector('.features-container');
-    const lastImage = document.querySelector('.image:last-child');
-    
-    const servicesConTop = servicesCon.getBoundingClientRect().top;
-    const featuresConTop = featuresContainer.getBoundingClientRect().top;
-  
-    if (servicesConTop < window.innerHeight - 100) {
-      services.classList.add('show');
-      quality.classList.add('show');
-      featureTitle.classList.add('show');
-    }
-  
-    if (featuresConTop < window.innerHeight - 100) {
-      featuresContainer.classList.add('show');
-      lastImage.classList.add('show-bottom');
-    }
-  });
-  

@@ -17,6 +17,12 @@
     />
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
+
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
   </head>
@@ -27,7 +33,11 @@
         <div class="logo">
           <img src="img/rb_2226.png" alt="Lego House Architects Logo" />
         </div>
-        <div class="menu">
+        <div class="menu-toggle" id="menuToggle">
+          <i class="fas fa-bars" id="hamburger"></i>
+          <i class="fas fa-times" id="close" style="display: none;"></i>
+        </div>
+        <div class="menu" id="menu">
           <a href="#projects">Projects</a>
           <a href="#stories">Stories</a>
           <a href="#career">Career</a>
@@ -36,7 +46,6 @@
         </div>
       </nav>
     </header>
-
     <!-- Landing page -->
     <main>
       <div class="main">
@@ -49,19 +58,19 @@
           class="image-left"
           src="img/1.jpg"
           alt="Project Left View"
-          loading="lazy"
+          
         />
         <img
           class="image-center"
           src="img/2.jpg"
           alt="Project Center View"
-          loading="lazy"
+          
         />
         <img
           class="image-right"
           src="img/3.jpg"
           alt="Project Right View"
-          loading="lazy"
+          
         />
       </div>
     </main>
@@ -73,67 +82,36 @@
         <p class="Services">Services</p>
         <p class="quality">Quality You Can Trust</p>
       </div>
-
+    
       <section class="features-section">
         <div class="features-container">
           <section class="sec show-animate">
             <div class="container animate">
               <h1 class="animate-text">hello</h1>
               <div class="images">
-                <img
-                  class="image left-image"
-                  src="img/pro1.jpg"
-                  alt="Left Image"
-                  loading="lazy"
-                />
-                <img
-                  class="image right-image"
-                  src="img/pro2.jpg"
-                  alt="Right Image"
-                  loading="lazy"
-                />
-                <img
-                  class="image center-image"
-                  src="img/pro3.jpg"
-                  alt="Center Image"
-                  loading="lazy"
-                />
+                <img class="image left-image" src="img/pro1.jpg" alt="Left Image" />
+                <img class="image right-image" src="img/pro2.jpg" alt="Right Image" />
+                <img class="image center-image" src="img/pro3.jpg" alt="Center Image" />
               </div>
             </div>
           </section>
         </div>
       </section>
     </section>
-
-  <!-- comparison Image -->
-    <div class="h-screen"></div>
+    
+    <!-- comparison Image -->
     <section class="comparisonSection">
       <div class="comparisonImage beforeImage">
-        <img
-          src="img/pro1.jpg"
-          alt="Project Before"
-          class="comparisonImg"
-          loading="lazy"
-        />
+        <img src="img/pro1.jpg" alt="Project Before" class="comparisonImg" />
       </div>
       <div class="comparisonImage afterImage">
-        <img
-          src="img/pro2.jpg"
-          alt="Project After"
-          class="comparisonImg"
-          loading="lazy"
-        />
+        <img src="img/pro2.jpg" alt="Project After" class="comparisonImg" />
       </div>
       <div class="comparisonImage thirdImage">
-        <img
-          src="img/pro3.jpg"
-          alt="Third Project"
-          class="comparisonImg"
-          loading="lazy"
-        />
+        <img src="img/pro3.jpg" alt="Third Project" class="comparisonImg" />
       </div>
     </section>
-    <div class="h-screen"></div>
+    
 
     <!-- our project -->
     <section class="projects-section">
@@ -144,7 +122,7 @@
             <div class="cards_el">
               <div class="cards_el-wrapp">
                 <div class="cards_img">
-                  <img src="img/pro1.jpg" alt="Project 1" loading="lazy" />
+                  <img src="img/pro1.jpg" alt="Project 1" />
                 </div>
               </div>
             </div>
@@ -153,7 +131,7 @@
             <div class="cards_el">
               <div class="cards_el-wrapp">
                 <div class="cards_img">
-                  <img src="img/pro2.jpg" alt="Project 2" loading="lazy" />
+                  <img src="img/pro2.jpg" alt="Project 2" />
                 </div>
               </div>
             </div>
@@ -162,7 +140,7 @@
             <div class="cards_el">
               <div class="cards_el-wrapp">
                 <div class="cards_img">
-                  <img src="img/pro3.jpg" alt="Project 3" loading="lazy" />
+                  <img src="img/pro3.jpg" alt="Project 3" />
                 </div>
               </div>
             </div>
@@ -171,7 +149,7 @@
         <div class="end-anim"></div>
       </section>
     </section>
-
+    
     <!-- footer -->
     <footer class="footer">
       <div class="container-footer">
@@ -236,6 +214,7 @@
         </div>
       </div>
     </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
