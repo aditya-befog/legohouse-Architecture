@@ -39,31 +39,18 @@ document.addEventListener("scroll", () => {
   //   startMobileScroll();
   // }
 
-  gsap.registerPlugin(ScrollTrigger);
+  let currentIndex = 0;
+const items = document.querySelectorAll('.work-photo-item');
+const totalItems = items.length;
 
-    const workInfoItems = document.querySelectorAll('.work-photo-item');
-    workInfoItems.forEach((item, index) => {
-      item.style.zIndex = workInfoItems.length - index;
-    });
+function showNextImage() {
+  items[currentIndex].classList.remove('active');
+  currentIndex = (currentIndex + 1) % totalItems;
+  items[currentIndex].classList.add('active');
+}
 
-    gsap.set(".work-photo-item", {
-      clipPath: "inset(0px 0px 0px 0px)"
-    });
+setInterval(showNextImage, 3000); // Change image every 3 seconds
 
-    const animation = gsap.to('.work-photo-item:not(:last-child)', {
-      clipPath: "inset(0px 0px 100% 0px)",
-      stagger: 0.5,
-      ease: "none"
-    });
-
-    ScrollTrigger.create({
-      trigger: '.work',
-      start: 'top top',
-      end: 'bottom bottom',
-      animation: animation,
-      scrub: 1
-    });
-  
 const cardsWrapper = gsap.utils.toArray(".cards_item");
 const cardEl = gsap.utils.toArray(".cards_el");
 
