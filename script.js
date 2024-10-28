@@ -26,7 +26,7 @@ document.addEventListener("scroll", () => {
     const leftImageOffset = Math.max(10 - scrollPosition * 0.5, -250);
     const rightImageOffset = Math.max(10 - scrollPosition * 0.5, -250);
     
-    const centerImageOffset = Math.min(-250 + scrollPosition * 0.5, 0);
+    const centerImageOffset = Math.min(-270 + scrollPosition * 0.5, 0);
  
     imageLeft.style.transform = `translateY(${leftImageOffset}%)`;
     imageRight.style.transform = `translateY(${rightImageOffset}%)`;

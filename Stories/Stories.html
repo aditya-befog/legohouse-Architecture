@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stories</title>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar" aria-label="Primary navigation">
+        <div class="logo">
+          <img src="../img/rb_2226.png" alt="Lego House Architects Logo" />
+        </div>
+        <div class="menu-toggle" id="menuToggle">
+          <i class="fas fa-bars" id="hamburger"></i>
+          <i class="fas fa-times" id="close" style="display: none"></i>
+        </div>
+        <div class="menu" id="menu">
+          <a href="#projects">Projects</a>
+          <a href="#stories">Stories</a>
+          <a href="#career">Career</a>
+          <a href="#contact">Contact</a>
+          <a href="#about">About Us</a>
+        </div>
+      </nav>
+    </header>
+
+    <div class="text">
+      <p data-aos="fade-down" data-aos-duration="1000">SUCCESS</p>
+      <div class="big-text">
+        <h1 data-aos="fade-down" data-aos-delay="1000">Stories</h1>
+      </div>
+      <div class="search-container" data-aos="fade-down" data-aos-delay="2000">
+        <input type="text" placeholder="Search..." class="search-input" />
+        <button class="search-btn" aria-label="Search Button">Search</button>
+      </div>
+    </div>
+    
+
+    <script>
+      AOS.init();
+    </script>
+    <script src="stories.js"></script>
+  </body>
+</html>
