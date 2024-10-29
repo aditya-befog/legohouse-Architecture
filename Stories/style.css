@@ -164,10 +164,10 @@ p {
 .search-container {
   display: flex;
   align-items: center;
-  border: 1px solid #ccc;
+  border: 2px solid #e4e4e4fd;
   border-radius: 2rem;
   overflow: hidden;
-  max-width: 60%;
+  max-width: 50%;
   width: 80%;
   margin-top: 1rem;
 }
@@ -202,12 +202,12 @@ p {
 
 .projects-section {
   text-align: center;
-  padding: 0% 0%;
+  padding: 3% 0%;
 }
 
 .projects-card {
   position: relative;
-  width: 100vw;
+  width: 98vw;
   min-height: 100vh;
   padding: var(--index);
   padding-top: 100px;
@@ -320,13 +320,52 @@ p {
   }
 }
 .more-scroll {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
   color: black;
   font-size: 16px;
   padding: 10px;
-  z-index: 1000;
   font-weight: 800;
 }
 
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: #e4e4e4fd;
+  padding: 20px;
+  flex-wrap: nowrap;
+}
+
+.footer img {
+  max-width: 100px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.footer h2 {
+  font-size: 12px;
+  color: #111111;
+  padding: 0 10%;
+}
+
+@media (max-width: 768px) {
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .more-scroll {
+    justify-content: center;
+  }
+
+  .footer {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer img {
+    margin-right: 0;
+  }
+}
