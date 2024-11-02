@@ -287,19 +287,19 @@
 
 .picture-container {
   margin-right: -33%;
-  margin-top: 10%;
+  margin-top: 23.4%;
   z-index: 1;
 }
 
 .picture-container img {
   border-radius: 50% 33% 49% 33%;
   width: 70%;
-  height: 50%;
+  height: 24.6rem;
   transform: rotate(-0.02turn);
 }
 
 .info-section {
-  background-color: #3a5a73;
+  background-color: #587593;
   color: white;
   padding: 20px;
   border-radius: 10px;
@@ -391,12 +391,12 @@
 
 .header-title {
   font-size: 2em;
-  margin: 2%;
+  margin: 2rem;
 }
 
 .paragraph-text {
   font-size: 1em;
-  margin: 2%;
+  margin: 2rem;
   color: #fff;
 }
 
@@ -409,7 +409,7 @@
   cursor: pointer;
   border-radius: 5px;
   transition: background-color 0.3s;
-  margin: 1rem 0;
+  margin: 0 2rem;
 }
 
 .btn-projects:hover {
@@ -429,7 +429,7 @@
 .icon-container {
   display: flex;
   justify-content: space-between;
-  margin-top: -8%;
+  margin-top: -9%;
   width: 68%;
   flex-wrap: wrap;
 }
@@ -438,7 +438,7 @@
   text-align: center;
   background-color: #fff;
   color: #000;
-  padding: 6%;
+  padding: 7%;
   flex: 1 1 16%;
   margin: 1rem;
   z-index: 1;

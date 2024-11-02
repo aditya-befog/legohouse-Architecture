@@ -108,6 +108,7 @@ body {
 .contact-header h1 {
   font-size: 10rem;
   color: #c7c7c7;
+  letter-spacing: 1.6rem;
   margin: 0 8%;
 }
 
@@ -117,7 +118,9 @@ body {
   left:  40.4%;
   transform: translate(-50%, -50%);
   font-size: 1rem;
+  font-family: 'Playfair Display', serif;
   color: #000000;
+  font-weight: 700;
 }
 
 .contact-methods {
@@ -279,7 +282,7 @@ textarea {
   padding: 2% 0;
 }
 
-button {
+.get-in-touch button {
   padding: 10px 15px;
   background-color: #bf1725;
   color: white;
@@ -290,7 +293,7 @@ button {
   width: 100px;
 }
 
-button:hover {
+.get-in-touch button:hover {
   background-color: #a5141e;
 }
 
@@ -335,8 +338,8 @@ button:hover {
 
 footer {
   background-color: #dddbdb;
-  color: #141212;
-  padding: 40px 0; /* Padding on top and bottom */
+  padding: 40px 0;
+  font-family: 'Inter', sans-serif;
 }
 
 .footer-container {
@@ -344,8 +347,8 @@ footer {
   flex-wrap: wrap;
   justify-content: space-between;
   max-width: 1200px;
-  margin: 0 auto; /* Center the container */
-  padding: 0 20px; /* Horizontal padding */
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 .footer-logo {
@@ -361,7 +364,7 @@ footer {
 .footer-logo img {
   max-width: 100px;
   height: auto;
-  margin: 0 auto; /* Center image horizontally */
+  margin: 0 auto;
 }
 
 .footer-section {
@@ -385,13 +388,13 @@ footer {
 }
 
 .footer-section ul li a {
-  color: #141212;
   text-decoration: none;
   transition: color 0.3s ease;
+  color: #000;
 }
 
 .contact-us-btn {
-  background-color: red;
+  background-color: #bf1725;
   color: #fff;
   padding: 10px 20px;
   border-radius: 5px;
@@ -399,9 +402,6 @@ footer {
   transition: background-color 0.3s ease;
 }
 
-.contact-us-btn:hover {
-  background-color: darkred; 
-}
 
 .social-icons {
   display: flex;
@@ -438,6 +438,19 @@ footer {
 .social-icon:hover {
   background-color: #ccc;
 }
+
+.Call-sales {
+  display: inline-block;
+  border-radius: 8px;
+  border: 1px solid #BE1623;
+  padding: 9px 19px;
+  text-align: center;
+  text-decoration: none;
+  background-color: white;
+  color: #BE1623;
+}
+
+
 
 @media (max-width: 768px) {
   .footer-container {

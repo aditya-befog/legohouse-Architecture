@@ -292,8 +292,8 @@ h1 {
 
 .images {
   position: relative;
-  width: 80vw;
-  height: 100%;
+  width: 85vw;
+  height: 100vw;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
@@ -303,7 +303,9 @@ h1 {
 .image {
   transition: 1s;
   max-width: 33%;
-  max-height: 75%;
+  max-height: 100%;
+  width: 304px;
+  height: 304px;
 }
 
 .image.left-image {
@@ -327,6 +329,7 @@ h1 {
   right: 0;
   top: 115px;
 }
+
 
 .container-img {
   position: relative;

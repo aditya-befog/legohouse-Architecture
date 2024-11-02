@@ -19,8 +19,8 @@ mm.add("(min-width: 767px)", () => {
         scrollTrigger: {
             trigger: ".section-card",
             pin: true,
-            markers: true,
-            scrub: 0.1,
+            markers: false,
+            scrub: 0.5,
             end: "+=6000 bottom",
         },
     });
