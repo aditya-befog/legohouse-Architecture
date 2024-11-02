@@ -27,7 +27,7 @@
 
 /* Menu Links */
 .menu a {
-  color: #000;
+  color: #696969;
   text-decoration: none;
   font-weight: 600;
   font-size: 20px;
@@ -127,7 +127,7 @@ p {
   left: 46.4%;
   transform: translate(-50%, -50%);
   font-size: 1rem;
-  color: #000000;
+  color:  #2D2D2D;
   z-index: 1;
   font-weight: 900;
 }
@@ -137,7 +137,7 @@ p {
   opacity: 0.5;
   z-index: 0;
   letter-spacing: 3rem;
-  color: #e4e4e4fd;
+  color: #C6C6C6;
 }
 
 @media (max-width: 1024px) {
@@ -172,7 +172,7 @@ p {
 .search-container {
   display: flex;
   align-items: center;
-  border: 2px solid #e4e4e4fd;
+  border: 2px solid #B1B1B1;
   border-radius: 2rem;
   overflow: hidden;
   max-width: 50%;
@@ -189,7 +189,7 @@ p {
 }
 
 .search-btn {
-  background-color: #e4e4e4fd;
+  background-color: #D9D9D9;
   color: #000000;
   border: none;
   padding: 1rem 2rem;
@@ -216,10 +216,10 @@ p {
 .projects-card {
   position: relative;
   width: 98vw;
-  min-height: 100vh;
+  min-height: 59vh;
   padding: var(--index);
   padding-top: 100px;
-  background-color: #a3a3a3;
+  background-color: #A3A3A3;
 }
 
 .section-card {
@@ -234,7 +234,7 @@ p {
 
 .cards {
   width: 80vw;
-  margin: 0 auto;
+  margin: 0 4% 0 9%;
   display: flex;
   overflow: hidden; 
 }
@@ -250,7 +250,7 @@ p {
 
 .cards_el {
   width: 100%;
-  height: 400px;
+  height: 500px;
 }
 
 .cards_el-wrapp {
@@ -337,12 +337,13 @@ p {
   font-weight: 800;
 }
 
+
 .footer {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  background-color: #e4e4e4fd;
-  padding: 20px;
+  background-color: #c2c2c2;
+  padding: 3% 2% 9%;
   flex-wrap: nowrap;
 }
 
@@ -353,8 +354,8 @@ p {
 }
 
 .footer h2 {
-  font-size: 12px;
-  color: #111111;
+  font-size: 15px;
+  color: #000000;
   padding: 0 10%;
 }
 
