@@ -163,7 +163,7 @@ h1 {
 
 @media (max-width: 768px) {
   main {
-    height: 80vw;
+    height: 50vw;
 }
   .main {
     padding: 100px 20px;
@@ -204,6 +204,11 @@ h1 {
     padding: 0;
   }
 
+}
+@media (max-width: 468px) {
+  main {
+    height: 80vw;
+}
 }
 
 /* Services */
@@ -327,7 +332,7 @@ h1 {
   position: absolute;
   bottom: 0;
   right: 0;
-  top: 115px;
+  top: 109px;
 }
 
 
@@ -677,9 +682,10 @@ h1 {
 /* Footer Styling */
 .footer {
   color: #000;
-  padding: 60px 20px;
+  padding: 3% 7%;
   text-align: left;
   background-color: #f8f9fa;
+  font-family: "Inter", sans-serif;
 }
 
 .container-footer {
@@ -754,6 +760,25 @@ h1 {
   font-size: 14px;
   color: #6c757d;
   border-top: 1px solid #eaeaea;
+}
+.contact-us-btn {
+  background-color: #5a1bb3;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.Call-sales {
+  display: inline-block;
+  border-radius: 8px;
+  border: 1px solid #5a1bb3;
+  padding: 9px 19px;
+  text-align: center;
+  text-decoration: none;
+  background-color: white;
+  color: #5a1bb3;
 }
 
 @media (max-width: 768px) {

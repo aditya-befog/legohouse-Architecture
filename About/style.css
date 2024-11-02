@@ -125,7 +125,7 @@
   opacity: 0.5;
   z-index: 0;
   letter-spacing: 3rem;
-  color: #e4e4e4fd;
+  color: #C6C6C6;
 }
 
 @media (max-width: 1024px) {
@@ -145,8 +145,8 @@
 @media (max-width: 480px) {
   .text p {
     position: absolute;
-    top: 23%;
-    left: 27.4%;
+    top: 22.5%;
+    left: 28.8%;
     transform: translate(-50%, -50%);
     font-size: 0.8rem;
     color: #000000;
@@ -430,31 +430,31 @@
   }
 
   .mission-container h1 {
-    font-size: 2em; /* Smaller heading for tablets */
+    font-size: 2em;
   }
 
   .mission-container p {
-    font-size: 1em; /* Smaller paragraph text */
+    font-size: 1em; 
   }
 }
 
 @media (max-width: 480px) {
   .mission-container {
-    padding: 15px; /* Adjust padding for mobile */
+    padding: 15px; 
   }
 
   .mission-container h1 {
-    font-size: 1.5em; /* Further reduce heading size on extra small screens */
+    font-size: 1.5em; 
   }
 
   .mission-container p {
-    font-size: 0.9em; /* Further reduce paragraph size */
+    font-size: 0.9em; 
   }
 }
 footer {
   background-color: #dddbdb;
-  color: #141212;
-  padding: 40px 0; /* Padding on top and bottom */
+  padding: 40px 0;
+  font-family: "Inter", sans-serif;
 }
 
 .footer-container {
@@ -462,8 +462,8 @@ footer {
   flex-wrap: wrap;
   justify-content: space-between;
   max-width: 1200px;
-  margin: 0 auto; /* Center the container */
-  padding: 0 20px; /* Horizontal padding */
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 .footer-logo {
@@ -503,22 +503,18 @@ footer {
 }
 
 .footer-section ul li a {
-  color: #141212;
   text-decoration: none;
   transition: color 0.3s ease;
+  color: #000;
 }
 
 .contact-us-btn {
-  background-color: red;
+  background-color: #bf1725;
   color: #fff;
   padding: 10px 20px;
   border-radius: 5px;
   display: inline-block;
   transition: background-color 0.3s ease;
-}
-
-.contact-us-btn:hover {
-  background-color: darkred;
 }
 
 .social-icons {
@@ -555,6 +551,17 @@ footer {
 
 .social-icon:hover {
   background-color: #ccc;
+}
+
+.Call-sales {
+  display: inline-block;
+  border-radius: 8px;
+  border: 1px solid #be1623;
+  padding: 9px 19px;
+  text-align: center;
+  text-decoration: none;
+  background-color: white;
+  color: #be1623;
 }
 
 @media (max-width: 768px) {

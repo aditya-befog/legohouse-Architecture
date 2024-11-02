@@ -2,7 +2,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
 }
 
 .navbar {
@@ -109,7 +109,6 @@
   pointer-events: none;
 }
 
-
 .text {
   display: flex;
   align-items: center;
@@ -127,7 +126,7 @@ p {
   left: 46.4%;
   transform: translate(-50%, -50%);
   font-size: 1rem;
-  color:  #2D2D2D;
+  color: #2d2d2d;
   z-index: 1;
   font-weight: 900;
 }
@@ -137,7 +136,7 @@ p {
   opacity: 0.5;
   z-index: 0;
   letter-spacing: 3rem;
-  color: #C6C6C6;
+  color: #c6c6c6;
 }
 
 @media (max-width: 1024px) {
@@ -157,7 +156,7 @@ p {
 @media (max-width: 480px) {
   p {
     position: absolute;
-    top: 23%;
+    top: 23.4%;
     left: 41.4%;
     transform: translate(-50%, -50%);
     font-size: 0.8rem;
@@ -172,11 +171,11 @@ p {
 .search-container {
   display: flex;
   align-items: center;
-  border: 2px solid #B1B1B1;
+  border: 2px solid #b1b1b1;
   border-radius: 2rem;
   overflow: hidden;
-  max-width: 50%;
-  width: 80%;
+  max-width: 70%;
+  width: 90%;
   margin-top: 1rem;
 }
 
@@ -186,25 +185,48 @@ p {
   outline: none;
   flex: 1;
   border-radius: 2rem 0 0 2rem;
+  font-size: 1rem;
 }
 
 .search-btn {
-  background-color: #D9D9D9;
+  background-color: #d9d9d9;
   color: #000000;
   border: none;
   padding: 1rem 2rem;
   cursor: pointer;
-  border-radius: 2rem;
+  border-radius: 0 2rem 2rem 0;
   font-weight: bold;
+  flex-shrink: 0;
 }
 
 @media (max-width: 768px) {
   .search-container {
-    max-width: 200px;
+    max-width: 100%;
+  }
+  .search-input {
+    padding: 0.8rem 1rem;
+    font-size: 0.9rem;
   }
   .search-btn {
     font-size: 0.9rem;
-    padding: 0.4rem 0.8rem;
+    padding: 0.6rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .search-container {
+    flex-direction: column;
+    max-width: 100%;
+  }
+  .search-input {
+    width: 100%;
+    border-radius: 2rem;
+  }
+  .search-btn {
+    width: 39%;
+    border-radius: 2rem;
+    margin-top: -2.8rem;
+    margin-right: -61%;
   }
 }
 
@@ -215,11 +237,11 @@ p {
 
 .projects-card {
   position: relative;
-  width: 98vw;
+  width: 100vw;
   min-height: 59vh;
   padding: var(--index);
   padding-top: 100px;
-  background-color: #A3A3A3;
+  background-color: #a3a3a3;
 }
 
 .section-card {
@@ -236,7 +258,7 @@ p {
   width: 80vw;
   margin: 0 4% 0 9%;
   display: flex;
-  overflow: hidden; 
+  overflow: hidden;
 }
 
 .cards_item {
@@ -304,7 +326,10 @@ p {
   }
   .cards_el {
     width: 100%;
-    height: 300px;
+    height: 220px;
+  }
+  .projects-card {
+    padding-top: 30px;
   }
 
   .cards_el-wrapp {
@@ -336,7 +361,6 @@ p {
   padding: 10px;
   font-weight: 800;
 }
-
 
 .footer {
   display: flex;

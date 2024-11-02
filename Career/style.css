@@ -116,7 +116,7 @@
   font-size: 1rem;
   color: #000000;
   z-index: 1;
-  font-weight: 500;
+  font-family: 800;
   letter-spacing: 0.4rem;
 }
 
@@ -125,7 +125,7 @@
   opacity: 0.5;
   z-index: 0;
   letter-spacing: 3rem;
-  color: #e4e4e4fd;
+  color:#C6C6C6;
 }
 
 @media (max-width: 1024px) {
@@ -336,12 +336,16 @@
   .wrapper {
     flex-direction: column;
     align-items: center;
-    padding: 10% 5%;
+    padding: 0% 5% 2%;
   }
 
   .picture-container {
-    margin-right: 0px;
+    margin-right: 120px;
     margin-bottom: -21.6%;
+}
+
+  .picture-container img {
+    height: 0;
   }
 
   .info-section {
@@ -365,6 +369,7 @@
     margin: 6%;
   }
 }
+
 
 .prop-wrapper {
   position: relative;
@@ -462,8 +467,13 @@
   .text-section {
     flex: 1 1 100%;
     text-align: center;
-    margin-right: 0;
+    margin-right: 36px;
   }
+
+  .paragraph-text {
+    margin: 0.5rem;
+  }
+
   .main-image {
     width: 94%;
     border-radius: 10px;
@@ -621,8 +631,8 @@
 
 footer {
   background-color: #dddbdb;
-  color: #141212;
   padding: 40px 0;
+  font-family: "Inter", sans-serif;
 }
 
 .footer-container {
@@ -671,22 +681,18 @@ footer {
 }
 
 .footer-section ul li a {
-  color: #141212;
   text-decoration: none;
   transition: color 0.3s ease;
+  color: #000;
 }
 
 .contact-us-btn {
-  background-color: red;
+  background-color: #bf1725;
   color: #fff;
   padding: 10px 20px;
   border-radius: 5px;
   display: inline-block;
   transition: background-color 0.3s ease;
-}
-
-.contact-us-btn:hover {
-  background-color: darkred;
 }
 
 .social-icons {
@@ -723,6 +729,17 @@ footer {
 
 .social-icon:hover {
   background-color: #ccc;
+}
+
+.Call-sales {
+  display: inline-block;
+  border-radius: 8px;
+  border: 1px solid #be1623;
+  padding: 9px 19px;
+  text-align: center;
+  text-decoration: none;
+  background-color: white;
+  color: #be1623;
 }
 
 @media (max-width: 768px) {
