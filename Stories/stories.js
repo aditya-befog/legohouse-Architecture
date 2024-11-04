@@ -11,7 +11,7 @@ const menuToggle = document.getElementById('menuToggle');
 gsap.registerPlugin(ScrollTrigger);
 let cards = gsap.utils.toArray(".cards_item");
 let mm = gsap.matchMedia();
-mm.add("(min-width: 767px)", () => {
+mm.add("(min-width: 840px)", () => {
     gsap.to(cards, {
         xPercent: (i) => -i * 105 + (i > 0 ? 8.5 * i : 0),
         duration: 0.5,
@@ -21,7 +21,7 @@ mm.add("(min-width: 767px)", () => {
             pin: true,
             markers: false,
             scrub: 0.5,
-            end: "+=10000 bottom",
+            end: "+=5000 bottom",
         },
     });
 });

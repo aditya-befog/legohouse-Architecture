@@ -17,7 +17,7 @@
 }
 
 .logo img {
-  height: 60px;
+  height: 55px;
 }
 
 .menu {
@@ -93,6 +93,10 @@
     width: 100%;
     text-align: center;
     transition: background-color 0.3s ease;
+  }
+
+  .logo img {
+    height: 35px;
   }
 
   .menu a:hover {
@@ -232,16 +236,17 @@ p {
 
 .projects-section {
   text-align: center;
-  padding: 3% 0%;
+  padding: 1% 0%;
 }
 
 .projects-card {
   position: relative;
-  width: 98vw;
   min-height: 59vh;
   padding: var(--index);
   padding-top: 100px;
   background-color: #a3a3a3;
+  margin: 0 3% 0 3%;
+  border-radius: 3rem;
 }
 
 .section-card {
@@ -249,8 +254,8 @@ p {
   width: 90vw;
   min-height: 100vh;
   padding: var(--index);
-  padding-bottom: 80px;
-  padding-top: 100px;
+  padding-bottom: 60px;
+  padding-top: 10px;
   overflow: hidden;
 }
 
@@ -330,6 +335,7 @@ p {
   }
   .projects-card {
     padding-top: 30px;
+    border-radius: 1rem;
   }
 
   .cards_el-wrapp {
@@ -360,6 +366,7 @@ p {
   font-size: 16px;
   padding: 10px;
   font-weight: 800;
+  margin: 0 0 1% -2%;
 }
 
 .footer {
@@ -381,6 +388,7 @@ p {
   font-size: 15px;
   color: #000000;
   padding: 0 10%;
+  font-family: "Inter", sans-serif;
 }
 
 @media (max-width: 768px) {
@@ -400,5 +408,12 @@ p {
 
   .footer img {
     margin-right: 0;
+  }
+}
+@media (max-width: 468px) {
+  .footer-logo img {
+    max-width: 65px;
+    height: auto;
+    margin: 0 auto;
   }
 }

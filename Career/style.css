@@ -16,8 +16,9 @@
 }
 
 .logo img {
-  height: 60px;
+  height: 55px;
 }
+
 
 .menu {
   display: flex;
@@ -81,6 +82,10 @@
   .menu-toggle i {
     font-size: 24px;
     color: #000;
+  }
+
+  .logo img {
+    height: 35px;
   }
   .menu {
     min-height: 100vh;
@@ -669,6 +674,7 @@ footer {
 .footer-section h4 {
   font-size: 18px;
   margin-bottom: 10px;
+  font-family: "Inter", sans-serif;
 }
 
 .footer-section ul {
@@ -684,6 +690,7 @@ footer {
   text-decoration: none;
   transition: color 0.3s ease;
   color: #000;
+  font-family: "Inter", sans-serif;
 }
 
 .contact-us-btn {
@@ -693,6 +700,11 @@ footer {
   border-radius: 5px;
   display: inline-block;
   transition: background-color 0.3s ease;
+  font-family: "Inter", sans-serif;
+}
+
+.contact-us-btn:hover {
+  background-color: #970f1a;
 }
 
 .social-icons {
@@ -740,6 +752,7 @@ footer {
   text-decoration: none;
   background-color: white;
   color: #be1623;
+  font-family: "Inter", sans-serif;
 }
 
 @media (max-width: 768px) {
@@ -754,5 +767,12 @@ footer {
 
   .social-icons {
     justify-content: center;
+  }
+}
+@media (max-width: 468px) {
+  .footer-logo img {
+    max-width: 65px;
+    height: auto;
+    margin: 0 auto;
   }
 }

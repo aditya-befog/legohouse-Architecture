@@ -27,7 +27,7 @@ document.addEventListener("scroll", () => {
   const leftImageOffset = Math.max(10 - scrollPosition * 0.5, -250);
   const rightImageOffset = Math.max(10 - scrollPosition * 0.5, -250);
 
-  const centerImageOffset = Math.min(-270 + scrollPosition * 0.5, 0);
+  const centerImageOffset = Math.min(-280 + scrollPosition * 0.5, 0);
 
   imageLeft.style.transform = `translateY(${leftImageOffset}%)`;
   imageRight.style.transform = `translateY(${rightImageOffset}%)`;
@@ -47,7 +47,7 @@ function showNextImage() {
 
 setInterval(showNextImage, 3000);
 
-const isMobile = window.matchMedia("(max-width: 768px)").matches;
+const isMobile = window.matchMedia("(max-width: 600px)").matches;
 
 if (!isMobile) {
   const cardsWrapper = gsap.utils.toArray(".cards_item");

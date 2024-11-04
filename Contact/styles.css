@@ -12,13 +12,14 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 16px 32px;
-  background-color: white;
+  background-color: transparent;
   z-index: 1000;
 }
 
 .logo img {
-  height: 60px;
+  height: 55px;
 }
+
 
 .menu {
   display: flex;
@@ -86,6 +87,10 @@ body {
   .menu {
     min-height: 100vh;
     height: 100vh;
+  }
+
+  .logo img {
+    height: 35px;
   }
 
   .menu a {
@@ -452,6 +457,10 @@ footer {
   transition: background-color 0.3s ease;
 }
 
+.contact-us-btn:hover {
+  background-color: #970f1a;
+}
+
 .social-icons {
   display: flex;
   list-style: none;
@@ -511,5 +520,12 @@ footer {
 
   .social-icons {
     justify-content: center;
+  }
+}
+@media (max-width: 468px) {
+  .footer-logo img {
+    max-width: 65px;
+    height: auto;
+    margin: 0 auto;
   }
 }
