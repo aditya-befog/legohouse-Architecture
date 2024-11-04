@@ -237,7 +237,7 @@ p {
 
 .projects-card {
   position: relative;
-  width: 100vw;
+  width: 98vw;
   min-height: 59vh;
   padding: var(--index);
   padding-top: 100px;

@@ -33,11 +33,7 @@ document.addEventListener("scroll", () => {
   imageRight.style.transform = `translateY(${rightImageOffset}%)`;
   imageCenter.style.transform = `translateY(${centerImageOffset}%)`;
 });
-// gsap.registerPlugin(ScrollTrigger);
 
-// if (window.innerWidth <= 768) {
-//   startMobileScroll();
-// }
 
 let currentIndex = 0;
 const items = document.querySelectorAll(".work-photo-item");
@@ -49,7 +45,7 @@ function showNextImage() {
   items[currentIndex].classList.add("active");
 }
 
-setInterval(showNextImage, 3000); // Change image every 3 seconds
+setInterval(showNextImage, 3000);
 
 const cardsWrapper = gsap.utils.toArray(".cards_item");
 const cardEl = gsap.utils.toArray(".cards_el");
