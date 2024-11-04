@@ -47,32 +47,36 @@ function showNextImage() {
 
 setInterval(showNextImage, 3000);
 
-const cardsWrapper = gsap.utils.toArray(".cards_item");
-const cardEl = gsap.utils.toArray(".cards_el");
+const isMobile = window.matchMedia("(max-width: 768px)").matches;
 
-cardsWrapper.forEach((e, i) => {
-  const card = cardEl[i];
-  let scale = 1;
-  let rotate = 0;
+if (!isMobile) {
+  const cardsWrapper = gsap.utils.toArray(".cards_item");
+  const cardEl = gsap.utils.toArray(".cards_el");
 
-  if (i !== cardEl.length - 1) {
-    scale = 0.9 + 0.025 * i;
-    rotate = -10;
-  }
+  cardsWrapper.forEach((e, i) => {
+    const card = cardEl[i];
+    let scale = 1;
+    let rotate = 0;
 
-  gsap.to(card, {
-    scale: scale,
-    rotationX: rotate,
-    transformOrigin: "top center",
-    ease: "none",
-    scrollTrigger: {
-      trigger: e,
-      start: `top ${70 + 40 * i}px`,
-      end: "bottom +=650px",
-      endTrigger: ".end-anim",
-      pin: e,
-      pinSpacing: false,
-      scrub: true,
-    },
+    if (i !== cardEl.length - 1) {
+      scale = 0.9 + 0.025 * i;
+      rotate = -10;
+    }
+
+    gsap.to(card, {
+      scale: scale,
+      rotationX: rotate,
+      transformOrigin: "top center",
+      ease: "none",
+      scrollTrigger: {
+        trigger: e,
+        start: `top ${70 + 40 * i}px`,
+        end: "bottom +=650px",
+        endTrigger: ".end-anim",
+        pin: e,
+        pinSpacing: false,
+        scrub: true,
+      },
+    });
   });
-});
+}
