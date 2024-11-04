@@ -695,6 +695,7 @@ h1 {
   .section-card {
     padding-bottom: 10px;
     padding-top: 11px;
+    margin: 0 2%;
   }
   .cards {
     width: 95%;
