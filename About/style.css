@@ -242,7 +242,7 @@
   }
 
   .text-section p {
-    font-size: 1em;
+    display: none;
   }
 
 }

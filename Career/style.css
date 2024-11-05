@@ -158,13 +158,7 @@
 
 @media (max-width: 480px) {
   .text p {
-    position: absolute;
-    top: 21%;
-    left: 32.4%;
-    transform: translate(-50%, -50%);
-    font-size: 0.8rem;
-    color: #000000;
-    z-index: 1;
+    display: none;
   }
   .big-text h1 {
     font-size: 4rem;
