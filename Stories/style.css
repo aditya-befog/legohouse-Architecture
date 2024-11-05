@@ -38,6 +38,10 @@
   text-decoration: underline;
 }
 
+.menu a:active {
+  text-decoration: underline;
+}
+
 .menu {
   display: flex;
 }
@@ -126,6 +130,7 @@
 
 p {
   position: absolute;
+  font-family: "Abhaya Libre", serif;
   top: 38%;
   left: 46.4%;
   transform: translate(-50%, -50%);

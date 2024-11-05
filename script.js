@@ -3,35 +3,40 @@ const menu = document.getElementById("menu");
 const hamburger = document.getElementById("hamburger");
 const close = document.getElementById("close");
 
-menuToggle.addEventListener("click", () => {
-  menu.classList.toggle("active");
-  hamburger.style.display =
-    hamburger.style.display === "none" ? "block" : "none";
-  close.style.display = close.style.display === "none" ? "block" : "none";
-});
 
-document.addEventListener("scroll", () => {
-  const scrollPosition = window.pageYOffset;
+document.body.classList.add("no-scroll");
 
+document.addEventListener("DOMContentLoaded", () => {
   const mainSection = document.querySelector(".main");
   const imageLeft = document.querySelector(".image-left");
   const imageCenter = document.querySelector(".image-center");
   const imageRight = document.querySelector(".image-right");
 
-  if (scrollPosition > 100) {
-    mainSection.classList.add("shrink");
-  } else {
-    mainSection.classList.remove("shrink");
-  }
+  imageLeft.style.transform = "translateY(100%)";
+  imageRight.style.transform = "translateY(100%)";
+  imageCenter.style.transform = "translateY(-280%)";
 
-  const leftImageOffset = Math.max(10 - scrollPosition * 0.5, -250);
-  const rightImageOffset = Math.max(10 - scrollPosition * 0.5, -250);
+  setTimeout(() => {
+    document.body.classList.remove("no-scroll");
 
-  const centerImageOffset = Math.min(-280 + scrollPosition * 0.5, 0);
+    document.addEventListener("scroll", () => {
+      const scrollPosition = window.pageYOffset;
 
-  imageLeft.style.transform = `translateY(${leftImageOffset}%)`;
-  imageRight.style.transform = `translateY(${rightImageOffset}%)`;
-  imageCenter.style.transform = `translateY(${centerImageOffset}%)`;
+      if (scrollPosition > 100) {
+        mainSection.classList.add("shrink");
+      } else {
+        mainSection.classList.remove("shrink");
+      }
+
+      const leftImageOffset = Math.max(10 - scrollPosition * 0.5, -250);
+      const rightImageOffset = Math.max(10 - scrollPosition * 0.5, -250);
+      const centerImageOffset = Math.min(-280 + scrollPosition * 0.5, 0);
+
+      imageLeft.style.transform = `translateY(${leftImageOffset}%)`;
+      imageRight.style.transform = `translateY(${rightImageOffset}%)`;
+      imageCenter.style.transform = `translateY(${centerImageOffset}%)`;
+    });
+  }, 1000);
 });
 
 

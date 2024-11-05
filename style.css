@@ -3,6 +3,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+.no-scroll {
+  overflow: hidden;
+}
 
 body {
   font-family: "Playfair Display", serif;
@@ -124,6 +127,7 @@ main {
 }
 
 .main h1, .main h2 {
+  font-family: "Abhaya Libre", serif;
   font-size: 110px;
   margin-bottom: 20px;
   letter-spacing: 20px;

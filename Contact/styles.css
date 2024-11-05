@@ -119,13 +119,14 @@ body {
 
 .contact-header p {
   position: absolute;
+  font-family: "Abhaya Libre", serif;
   top: 40%;
-  left: 40.4%;
+  left: 38.4%;
   transform: translate(-50%, -50%);
   font-size: 1rem;
-  font-family: "Playfair Display", serif;
-  color: #000000;
-  font-weight: 700;
+  color: #2d2d2d;
+  z-index: 1;
+  font-weight: 900;
 }
 
 .contact-methods {
@@ -242,9 +243,7 @@ p {
   }
 
   .contact-header p {
-    font-size: 0.7rem;
-    top: 27.5%;
-    left: 26.4%;
+    display: none;
   }
 
   .get-in-touch h2 {
@@ -389,6 +388,15 @@ textarea {
     flex-direction: column-reverse;
     flex-wrap: wrap;
   }
+  .input-group input,
+.message-group textarea {
+  flex: 1;
+  padding: 2rem 0.7rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: "Font Awesome 5 Free", Arial, sans-serif;
+  font-weight: 400;
+}
 }
 
 footer {

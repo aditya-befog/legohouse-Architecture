@@ -115,14 +115,14 @@
 
 .text p {
   position: absolute;
+  font-family: "Abhaya Libre", serif;
   top: 36%;
-  left: 43.8%;
+  left: 45.8%;
   transform: translate(-50%, -50%);
   font-size: 1rem;
-  color: #000000;
+  color: #2d2d2d;
   z-index: 1;
-  font-family: 800;
-  letter-spacing: 0.4rem;
+  font-weight: 900;
 }
 
 .big-text h1 {
