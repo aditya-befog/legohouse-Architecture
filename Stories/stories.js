@@ -21,7 +21,7 @@ mm.add("(min-width: 840px)", () => {
             pin: true,
             markers: false,
             scrub: 0.5,
-            end: "+=5000 bottom",
+            end: "+=2000 bottom",
         },
     });
 });
