@@ -9,41 +9,78 @@ menuToggle.addEventListener("click", () => {
     hamburger.style.display === "none" ? "block" : "none";
   close.style.display = close.style.display === "none" ? "block" : "none";
 })
-document.body.classList.add("no-scroll");
-
-document.addEventListener("DOMContentLoaded", () => {
-  const mainSection = document.querySelector(".main");
-  const imageLeft = document.querySelector(".image-left");
-  const imageCenter = document.querySelector(".image-center");
-  const imageRight = document.querySelector(".image-right");
-
-  imageLeft.style.transform = "translateY(100%)";
-  imageRight.style.transform = "translateY(100%)";
-  imageCenter.style.transform = "translateY(-280%)";
-
-  setTimeout(() => {
-    document.body.classList.remove("no-scroll");
-
-    document.addEventListener("scroll", () => {
-      const scrollPosition = window.pageYOffset;
-
-      if (scrollPosition > 100) {
-        mainSection.classList.add("shrink");
-      } else {
-        mainSection.classList.remove("shrink");
-      }
-
-      const leftImageOffset = Math.max(10 - scrollPosition * 0.5, -250);
-      const rightImageOffset = Math.max(10 - scrollPosition * 0.5, -250);
-      const centerImageOffset = Math.min(-280 + scrollPosition * 0.5, 0);
-
-      imageLeft.style.transform = `translateY(${leftImageOffset}%)`;
-      imageRight.style.transform = `translateY(${rightImageOffset}%)`;
-      imageCenter.style.transform = `translateY(${centerImageOffset}%)`;
+function loadSVG () {
+    fetch("city.svg")
+    .then((response) => { return response.text();})
+    .then((svg) => {
+        document.getElementById('bg_city').innerHTML = svg;
+        document.querySelector('#bg_city svg').setAttribute("preserveAspectRatio", "xMidYMid slice");
+        setAnimationScroll();
+    })
+}
+loadSVG();
+function setAnimationScroll () {
+    gsap.registerPlugin(ScrollTrigger);
+    let runAnimation = gsap.timeline({
+        scrollTrigger: {
+            trigger: "#bg_city",
+            start: "top top",
+            end: "+=1000",
+            scrub: true,
+            pin: true
+        }
     });
-  }, 1000);
-});
 
+    runAnimation.add([
+        gsap.to("#bg_city svg", 2, {
+            scale: 1.5
+        }),
+        gsap.to("#full_city", 2, {
+            opacity: 0
+        })
+    ])
+    .add([
+        gsap.to("#building_top", 2, {
+            y: -200,
+            opacity: 0
+        }),
+        gsap.to("#wall_side", 2, {
+            x: -200,
+            opacity: 0
+        }),
+        gsap.to("#wall_front", 2, {
+            x: 200, y: 200,
+            opacity: 0
+        })
+    ])
+    .add([
+        gsap.to("#interior_wall_side", 2, {
+            x: -200,
+            opacity: 0
+        }),
+        gsap.to("#interior_wall_top", 2, {
+            y: -200,
+            opacity: 0
+        }),
+        gsap.to("#interior_wall_side_2", 2, {
+            opacity: 0
+        }),
+        gsap.to("#interior_wall_front", 2, {
+            opacity: 0
+        })
+    ]);
+}
+
+const slides = document.querySelectorAll('.slide');
+let currentIndexside = 0;
+
+function showNextSlide() {
+  slides[currentIndexside].classList.remove('active');
+  currentIndexside = (currentIndexside + 1) % slides.length;
+  slides[currentIndexside].classList.add('active');
+}
+
+setInterval(showNextSlide, 3000);
 
 let currentIndex = 0;
 const items = document.querySelectorAll(".work-photo-item");
@@ -57,36 +94,3 @@ function showNextImage() {
 
 setInterval(showNextImage, 3000);
 
-const isMobile = window.matchMedia("(max-width: 600px)").matches;
-
-if (!isMobile) {
-  const cardsWrapper = gsap.utils.toArray(".cards_item");
-  const cardEl = gsap.utils.toArray(".cards_el");
-
-  cardsWrapper.forEach((e, i) => {
-    const card = cardEl[i];
-    let scale = 1;
-    let rotate = 0;
-
-    if (i !== cardEl.length - 1) {
-      scale = 0.9 + 0.025 * i;
-      rotate = -10;
-    }
-
-    gsap.to(card, {
-      scale: scale,
-      rotationX: rotate,
-      transformOrigin: "top center",
-      ease: "none",
-      scrollTrigger: {
-        trigger: e,
-        start: `top ${70 + 40 * i}px`,
-        end: "bottom +=650px",
-        endTrigger: ".end-anim",
-        pin: e,
-        pinSpacing: false,
-        scrub: true,
-      },
-    });
-  });
-}
