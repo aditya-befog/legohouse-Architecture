@@ -8,21 +8,11 @@ const menuToggle = document.getElementById('menuToggle');
       hamburger.style.display = hamburger.style.display === 'none' ? 'block' : 'none';
       close.style.display = close.style.display === 'none' ? 'block' : 'none';
     });
-gsap.registerPlugin(ScrollTrigger);
-let cards = gsap.utils.toArray(".cards_item");
-let mm = gsap.matchMedia();
-mm.add("(min-width: 840px)", () => {
-    gsap.to(cards, {
-        xPercent: (i) => -i * 105 + (i > 0 ? 8.5 * i : 0),
-        duration: 0.5,
-        ease: "none",
-        scrollTrigger: {
-            trigger: ".section-card",
-            pin: true,
-            markers: false,
-            scrub: 0.5,
-            end: "+=2000 bottom",
-        },
-    });
-});
-
+    document.getElementById('next').onclick = function(){
+        let lists = document.querySelectorAll('.item');
+        document.getElementById('slide').appendChild(lists[0]);
+    }
+    document.getElementById('prev').onclick = function(){
+        let lists = document.querySelectorAll('.item');
+        document.getElementById('slide').prepend(lists[lists.length - 1]);
+    }

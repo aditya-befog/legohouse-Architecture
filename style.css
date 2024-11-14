@@ -7,6 +7,7 @@ html, body{
     overflow-x: hidden;
     margin: 0;
     padding: 0;
+    background: #000;
 }
 
 :root {
@@ -223,7 +224,6 @@ main::after {
   text-align: center;
   padding: 11px -5px;
   height: 110vh;
-  background-color: #ffffff;
   top: -10px;
 }
 
@@ -253,7 +253,7 @@ main::after {
 
 .quality {
   display: block;
-  color: black;
+  color: white;
   margin-top: 0;
   font-weight: 600;
   transform: translateY(-103px);
@@ -302,7 +302,6 @@ main::after {
 }
 
 .images {
-  position: relative;
   width: 85vw;
   height: 100vw;
   display: flex;
@@ -336,6 +335,7 @@ main::after {
   font-size: 1rem;
   border-radius: 5px;
   text-align: center;
+  display: none;
 }
 
 .image.center-image {
@@ -357,6 +357,7 @@ main::after {
   font-size: 1rem;
   border-radius: 5px;
   text-align: center;
+  display: none;
 }
 
 .image.right-image {
@@ -376,6 +377,7 @@ main::after {
   font-size: 1rem;
   border-radius: 5px;
   text-align: center;
+  display: none;
 }
 
 
@@ -551,7 +553,7 @@ main::after {
 
 @media (max-width: 480px) {
   .services-section {
-    min-height: 120vh;
+    min-height: 100vh;
     background-color: #c7c7c7;
   }
   .text-overlay-left, .text-overlay-center, .text-overlay-right {
@@ -739,13 +741,13 @@ main::after {
   }
   
   .ourproject h1 {
-    margin-bottom: 2rem;
-    font-size: 2rem;
-    color: #333;
+    margin-bottom: 4rem;
+    font-size: 4rem;
+    color: #f3f3f3;
   }
   
   .slider {
-    width: 80vw;
+    width: 86vw;
     overflow: hidden;
     position: relative;
     margin: 0 auto;
@@ -773,7 +775,7 @@ main::after {
     }
   
     .slider {
-      width: 80vw;
+      width: 86vw;
     }
   }
   
@@ -783,7 +785,7 @@ main::after {
     }
   
     .slider {
-      width: 80vw;
+      width: 86vw;
     }
   }
 footer {
