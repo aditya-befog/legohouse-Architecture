@@ -3,6 +3,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  background: #000;
 }
 
 .navbar {
@@ -28,7 +29,7 @@ body {
 
 /* Menu Links */
 .menu a {
-  color: #696969;
+  color: #f3f3f3;
   text-decoration: none;
   font-weight: 600;
   font-size: 20px;
@@ -82,7 +83,7 @@ body {
 
   .menu-toggle i {
     font-size: 24px;
-    color: #000;
+    color: #f3f3f3;
   }
   .menu {
     min-height: 100vh;
